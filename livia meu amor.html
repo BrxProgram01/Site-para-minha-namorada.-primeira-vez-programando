@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("sakura-anime-wallpaper-l90bx45ls0lyez6e.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: indigo;
+    font-style: italic;
+    text-align: center;
+    overflow: hidden; /* impede rolagem por causa das flores */
+  }
+
+  .primeiro {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+  }
+
+  img {
+    display: block;
+    margin: 30px auto;
+    width: 250px;
+    border-radius: 20px;
+    animation: girar 20s linear infinite, brilhar 3s ease-in-out infinite alternate;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+  }
+
+  @keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes brilhar {
+    from { box-shadow: 0 0 10px rgba(255, 182, 193, 0.4); }
+    to { box-shadow: 0 0 25px rgba(255, 182, 193, 1); }
+  }
+
+  /* Flores caindo */
+  .flor {
+    position: absolute;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/414/414974.png');
+    background-size: cover;
+    opacity: 0.9;
+    animation: cair 10s linear infinite;
+  }
+
+  @keyframes cair {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0.7; }
+  }
+</style>
+</head>
+
+<body>
+  <div class="primeiro">
+    Esse é um site básico feito para a pessoa que eu mais amo no mundo!!!
+    Ainda sou iniciante nisso, porém quero muito aprender sobre, e achei que fazer um site de início pra você,
+    acompanhando minha evolução e dedicando meu tempo pra você, seria a melhor forma de demonstrar o quanto eu te amo!
+  </div>
+
+  <img src="Livialinda.jpg.jpeg" alt="Foto dela">
+
+  <!-- Flores de sakura caindo -->
+  <div class="flor" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="flor" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="flor" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="flor" style="left: 70%; animation-delay: 1s;"></div>
+  <div class="flor" style="left: 90%; animation-delay: 3s;"></div>
+</body>
+</html>
